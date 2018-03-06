@@ -1,6 +1,9 @@
 package com.developer.jatin.womenhackathon;
 
+import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -13,16 +16,20 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.developer.jatin.womenhackathon.Fragments.find_counselors;
+import com.developer.jatin.womenhackathon.Fragments.find_pro_women;
+
 public class MainScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+Toolbar toolbar;
+CoordinatorLayout coordinatorLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+//        coordinatorLayout=(CoordinatorLayout)findViewById(R.id.ap)
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,19 +85,30 @@ public class MainScreen extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
 
+//        int id = item.getItemId();
         int id = item.getItemId();
 
         if (id == R.id.find_professional_women) {
 
         } else if (id == R.id.find_counselors) {
-
+            toolbar.setTitle("Schemes");
+//     toolbar.setBackgroundColor(Color.parseColor("#0084a8"));
+            find_counselors blankFragment=new find_counselors();
+            android.app.FragmentManager fragmentManager=getFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.app_bar,blankFragment,blankFragment.getTag()).commit();
         } else if (id == R.id.recent_chats) {
 
         } else if (id == R.id.upcoming_sessions) {
 
-        } else if (id == R.id.suggest_topic) {
+        } else if (id== R.id.suggest_topic) {
 
         } else if (id == R.id.share) {
+
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.send));
+            sendIntent.setType("text/plain");
+            startActivity(Intent.createChooser(sendIntent, getString(R.string.send)));
 
         }else if (id == R.id.feedback) {
 
