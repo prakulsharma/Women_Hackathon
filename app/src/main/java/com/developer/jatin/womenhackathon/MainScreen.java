@@ -16,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.developer.jatin.womenhackathon.Fragments.SuggestTopic;
 import com.developer.jatin.womenhackathon.Fragments.find_counselors;
 import com.developer.jatin.womenhackathon.Fragments.find_pro_women;
 
@@ -101,7 +102,9 @@ CoordinatorLayout coordinatorLayout;
         } else if (id == R.id.upcoming_sessions) {
 
         } else if (id== R.id.suggest_topic) {
-
+            SuggestTopic blankFragment=new SuggestTopic();
+            android.app.FragmentManager fragmentManager=getFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.app_bar,blankFragment,blankFragment.getTag()).commit();
         } else if (id == R.id.share) {
 
             Intent sendIntent = new Intent();
