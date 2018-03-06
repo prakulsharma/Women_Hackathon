@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/find_professional_women"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Find Professional women" />
+        <item
+            android:id="@+id/find_counselors"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Find Counselors" />
+        <item
+            android:id="@+id/recent_chats"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Recent Chats" />
+        <item
+            android:id="@+id/upcoming_sessions"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Upcoming sessions" />
+
+        <item
+            android:id="@+id/suggest_topic"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Suggest session topic" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/feedback"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Feedback" />
+        </menu>
+    </item>
+
+</menu>
