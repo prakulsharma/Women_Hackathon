@@ -16,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.developer.jatin.womenhackathon.Fragments.Feedback;
 import com.developer.jatin.womenhackathon.Fragments.SuggestTopic;
 import com.developer.jatin.womenhackathon.Fragments.find_counselors;
 import com.developer.jatin.womenhackathon.Fragments.find_pro_women;
@@ -114,7 +115,9 @@ CoordinatorLayout coordinatorLayout;
             startActivity(Intent.createChooser(sendIntent, getString(R.string.send)));
 
         }else if (id == R.id.feedback) {
-
+            Feedback blankFragment=new Feedback();
+            android.app.FragmentManager fragmentManager=getFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.app_bar,blankFragment,blankFragment.getTag()).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
