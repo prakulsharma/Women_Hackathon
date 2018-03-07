@@ -18,6 +18,7 @@ import android.view.MenuItem;
 
 import com.developer.jatin.womenhackathon.Fragments.Feedback;
 import com.developer.jatin.womenhackathon.Fragments.SuggestTopic;
+import com.developer.jatin.womenhackathon.Fragments.UpcomingSessions;
 import com.developer.jatin.womenhackathon.Fragments.find_counselors;
 import com.developer.jatin.womenhackathon.Fragments.find_pro_women;
 
@@ -102,6 +103,9 @@ CoordinatorLayout coordinatorLayout;
 
         } else if (id == R.id.upcoming_sessions) {
 
+            UpcomingSessions blankFragment=new UpcomingSessions();
+            android.app.FragmentManager fragmentManager=getFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.app_bar,blankFragment,blankFragment.getTag()).commit();
         } else if (id== R.id.suggest_topic) {
             SuggestTopic blankFragment=new SuggestTopic();
             android.app.FragmentManager fragmentManager=getFragmentManager();
