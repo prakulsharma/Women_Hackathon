@@ -106,19 +106,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:gravity="center">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="SEND"
-                        android:textSize="20dp"
-                        android:textStyle="bold"/>
                     <ImageButton
-                        android:layout_width="50dp"
+                        android:layout_width="100dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="10dp"
+
                         android:id="@+id/send"
-                        android:background="@drawable/ic_menu_camera"/>
+                        android:background="@drawable/submit"/>
                 </LinearLayout>
             </LinearLayout>
 
