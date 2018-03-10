@@ -130,7 +130,7 @@
                             android:gravity="center"
                             android:id="@+id/prerequistie_enfrglish_speaking"
                             android:layout_weight="1.2"
-                            android:text="PreRequistie..."
+                            android:text="PreRequistie: basic english"
                             android:textColor="#000"
                             />
                     </LinearLayout>
@@ -263,7 +263,7 @@
                             android:gravity="center"
                             android:id="@+id/prerequistie_english_speaking"
                             android:layout_weight="1.2"
-                            android:text="PreRequistie..."
+                            android:text="PreRequistie:trignometry"
                             android:textColor="#000"
                             />
                     </LinearLayout>
