@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.developer.jatin.womenhackathon.Fragments.Feedback;
+import com.developer.jatin.womenhackathon.Fragments.Recent_chats;
 import com.developer.jatin.womenhackathon.Fragments.SuggestTopic;
 import com.developer.jatin.womenhackathon.Fragments.UpcomingSessions;
 import com.developer.jatin.womenhackathon.Fragments.find_counselors;
@@ -85,6 +86,9 @@ CoordinatorLayout coordinatorLayout;
 
         if (id == R.id.find_professional_women) {
 
+            find_pro_women blankFragment=new find_pro_women();
+            android.app.FragmentManager fragmentManager=getFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.app_bar,blankFragment,blankFragment.getTag()).commit();
         } else if (id == R.id.find_counselors) {
             toolbar.setTitle("Schemes");
 //     toolbar.setBackgroundColor(Color.parseColor("#0084a8"));
@@ -92,7 +96,9 @@ CoordinatorLayout coordinatorLayout;
             android.app.FragmentManager fragmentManager=getFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.app_bar,blankFragment,blankFragment.getTag()).commit();
         } else if (id == R.id.recent_chats) {
-
+            Recent_chats blankFragment=new Recent_chats();
+            android.app.FragmentManager fragmentManager=getFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.app_bar,blankFragment,blankFragment.getTag()).commit();
         } else if (id == R.id.upcoming_sessions) {
 
             UpcomingSessions blankFragment=new UpcomingSessions();
