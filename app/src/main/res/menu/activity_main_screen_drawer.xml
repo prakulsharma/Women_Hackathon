@@ -6,24 +6,24 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/find_professional_women"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/find_professional_women"
             android:title="Find Professional women" />
         <item
             android:id="@+id/find_counselors"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/find_coun"
             android:title="Find Counselors" />
         <item
             android:id="@+id/recent_chats"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/recent_chat"
             android:title="Recent Chats" />
         <item
             android:id="@+id/upcoming_sessions"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/upcoming"
             android:title="Upcoming sessions" />
 
         <item
             android:id="@+id/suggest_topic"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/suggest"
             android:title="Suggest session topic" />
     </group>
 
@@ -35,7 +35,7 @@
                 android:title="Share" />
             <item
                 android:id="@+id/feedback"
-                android:icon="@drawable/ic_menu_gallery"
+                android:icon="@drawable/feed"
                 android:title="Feedback" />
         </menu>
     </item>
