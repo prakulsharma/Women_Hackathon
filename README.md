@@ -55,4 +55,6 @@ learning from each other on voluntary basis.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/jb1998/Women_Hackathon/blob/master/LICENSE) file for details
+
+- Copyright (c) 2018 Jatin Bindra
