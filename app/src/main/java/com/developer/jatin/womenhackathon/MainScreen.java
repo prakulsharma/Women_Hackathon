@@ -31,7 +31,7 @@ CoordinatorLayout coordinatorLayout;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
-         toolbar = (Toolbar) findViewById(R.id.toolbar);
+         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 //        coordinatorLayout=(CoordinatorLayout)findViewById(R.id.ap)
 
@@ -41,13 +41,13 @@ CoordinatorLayout coordinatorLayout;
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -85,44 +85,46 @@ CoordinatorLayout coordinatorLayout;
         int id = item.getItemId();
 
         if (id == R.id.find_professional_women) {
-
             find_pro_women blankFragment=new find_pro_women();
             android.app.FragmentManager fragmentManager=getFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.app_bar,blankFragment,blankFragment.getTag()).commit();
-        } else if (id == R.id.find_counselors) {
+        }
+        else if (id == R.id.find_counselors) {
             toolbar.setTitle("Schemes");
-//     toolbar.setBackgroundColor(Color.parseColor("#0084a8"));
+            toolbar.setBackgroundColor(Color.parseColor("#0084a8"));
             find_counselors blankFragment=new find_counselors();
             android.app.FragmentManager fragmentManager=getFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.app_bar,blankFragment,blankFragment.getTag()).commit();
-        } else if (id == R.id.recent_chats) {
+        }
+        else if (id == R.id.recent_chats) {
             Recent_chats blankFragment=new Recent_chats();
             android.app.FragmentManager fragmentManager=getFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.app_bar,blankFragment,blankFragment.getTag()).commit();
-        } else if (id == R.id.upcoming_sessions) {
-
+        }
+        else if (id == R.id.upcoming_sessions) {
             UpcomingSessions blankFragment=new UpcomingSessions();
             android.app.FragmentManager fragmentManager=getFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.app_bar,blankFragment,blankFragment.getTag()).commit();
-        } else if (id== R.id.suggest_topic) {
+        }
+        else if (id== R.id.suggest_topic) {
             SuggestTopic blankFragment=new SuggestTopic();
             android.app.FragmentManager fragmentManager=getFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.app_bar,blankFragment,blankFragment.getTag()).commit();
-        } else if (id == R.id.share) {
-
+        } 
+        else if (id == R.id.share) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
             sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.send));
             sendIntent.setType("text/plain");
             startActivity(Intent.createChooser(sendIntent, getString(R.string.send)));
-
-        }else if (id == R.id.feedback) {
+        }
+        else if (id == R.id.feedback) {
             Feedback blankFragment=new Feedback();
             android.app.FragmentManager fragmentManager=getFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.app_bar,blankFragment,blankFragment.getTag()).commit();
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
